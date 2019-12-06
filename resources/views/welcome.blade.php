@@ -65,9 +65,10 @@
      
 
           <div class = "col-md-2">
-           <a href="{{ route('posts.create')}}" class="btn btn-lg btn-block btn-primary">Create new Posts</a>
+           <a href="{{ route('posts.create')}}" class="btn btn-primary">Create new Posts</a>
          </div>
      
+
         
         <div class="row">
             <div class="col-md-8">
@@ -76,34 +77,14 @@
               <div class="post">
                 <h3>{{$post->title}}</h3>
                 <p>{{$post->body}}</p>
+                <a href="{{ route('comments.store',$post->id) }}" class="btn btn-primary">Create new comment</a>
               </div>
-              <hr>
+            </div>
+            <hr>
 
               @endforeach
 
-              <!-- <div class="post">
-                <h3>Post Title</h3>
-                <p>Example.....</p>
-                <a href="#" class="btn btn-primary"> ReadMore</a>
-              </div>
-              <hr>
-
-              <div class="post">
-                <h3>Post Title</h3>
-                <p>Example.....</p>
-                <a href="#" class="btn btn-primary"> ReadMore</a>
-              </div>
-              <hr>
-
-              <div class="post">
-                <h3>Post Title</h3>
-                <p>Example.....</p>
-                <a href="#" class="btn btn-primary"> ReadMore</a>
-              </div> -->
-
-         
-          
-        </div>     
+          </div>     
     </div> <!--end of container-->
 
     <!-- Optional JavaScript -->

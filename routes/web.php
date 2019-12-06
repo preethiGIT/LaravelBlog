@@ -19,7 +19,7 @@ Route::get('/', 'PagesController@getIndex');
 Route::resource ('posts','PostController');   
 
 //comments (to store)(creates a  named routes)
-//Route::post('comments/{post_id}', '['uses' =>CommentsController@store', 'as' =>'comments.store']);
+Route::post('comments/{post_id}', ['uses' => 'CommentsController@store', 'as' =>'comments.store']);
 
 
 
