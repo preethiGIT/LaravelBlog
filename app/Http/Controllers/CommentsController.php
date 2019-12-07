@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Comment;
+use App\Post;
 
 class CommentsController extends Controller
 {
@@ -24,7 +24,9 @@ class CommentsController extends Controller
      */
     public function create()
     {
-        
+        return view('blog.single')->withPost($post);
+
+
     }
 
     /**
@@ -35,7 +37,7 @@ class CommentsController extends Controller
      */
     public function store(Request $request)
     {
-        return view('blog.single');
+        
     }
 
     /**

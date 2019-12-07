@@ -33,21 +33,7 @@
       </li>
     </ul>
 
-    <!--<li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>-->
-  <!--  <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>-->
+  
     </div>
     </nav>
 <!--default navbar-->
@@ -62,32 +48,24 @@
             </div>
         </div><!-- end of header .row-->
 
-     
-
-          <div class = "col-md-2">
+        <div class = "col-md-2">
            <a href="{{ route('posts.create')}}" class="btn btn-primary">Create new Posts</a>
          </div>
      
-
-        
-        <div class="row">
+         <div class="row">
             <div class="col-md-8">
-             
               @foreach($posts as $post)
               <div class="post">
                 <h3>{{$post->title}}</h3>
                 <p>{{$post->body}}</p>
-                <a href="{{ route('comments.store',$post->id) }}" class="btn btn-primary">Create new comment</a>
+                <a href="{{ route('comments.create',$post->id) }}" class="btn btn-primary">Create new comment</a>
               </div>
             </div>
             <hr>
-
               @endforeach
-
           </div>     
     </div> <!--end of container-->
 
-    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

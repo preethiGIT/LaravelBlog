@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['middleware' => ['web']], function (){
+	
 Route::get('contact', 'PagesController@getContact');
 
 Route::get('about', 'PagesController@getAbout');
@@ -19,8 +21,10 @@ Route::get('/', 'PagesController@getIndex');
 Route::resource ('posts','PostController');   
 
 //comments (to store)(creates a  named routes)
-Route::post('comments/{post_id}', ['uses' => 'CommentsController@store', 'as' =>'comments.store']);
+Route::get('comments/{post_id}', ['uses' => 'CommentsController@create', 'as' =>'comments.create']);
+
+//Route::post('comments', 'CommentsController@store') ->name('comments.store');
 
 
-
+});
 
